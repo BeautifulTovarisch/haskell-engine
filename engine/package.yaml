@@ -23,12 +23,13 @@ dependencies:
 - base >= 4.7 && < 5
 
 library:
-  source-dirs: src
+  source-dirs:
+    - src
+    - src/lib-a
 
 executables:
   engine-exe:
     main:                Main.hs
-    source-dirs:         src
     ghc-options:
     - -threaded
     - -rtsopts
@@ -39,7 +40,7 @@ executables:
 tests:
   engine-test:
     main:                Spec.hs
-    source-dirs:         src/lib-a
+    source-dirs:         src/lib-a/test
     ghc-options:
     - -threaded
     - -rtsopts
